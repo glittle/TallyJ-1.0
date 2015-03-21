@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title></title>
+<script TYPE="text/javascript" SRC="../jquery-1.4.4.js"></script>
+<script TYPE="text/javascript" SRC="../general.js"></script>
+<script TYPE="text/javascript" SRC="../namelist.js"></script>
+<script TYPE="text/javascript" SRC="../ballotChecks.js"></script>
+<script TYPE="text/javascript" SRC="../ballots.js"></script>
+<script type="text/javascript" src="../highslide-full.js"></script>
+<link rel="stylesheet" type="text/css" href="../highslide.css" />
+<LINK REL="stylesheet" TYPE="text/css" HREF="../tally.css">
+<bgsound id=snd>
+</head>
+<script type="text/javascript">
+sThisPage = 'Ballots'  // used in code...
+</script>
+<body class="BallotsPage">
+<table width=98% border=0 class=Height100 id=table1>
+<tr style="height:10px">
+  <td width="180px" style="background-color: #CCCCFF" class=TitleTight>
+     <button id=btnRevalidate onclick="RevalidateAll()" AccessKeyPhrase=BallotRefreshAccessKey DefaultPhrase=BallotRefreshLink></button>
+     </td>
+  <td width="230px" style="background-color: #CCFF99" class=TitleTight nowrap><span DefaultPhrase=BallotNamesLink></span></td>
+  <td style="background-color: #CCCCFF" class=TitleTight><div id=divBallotTitle></div></td>
+</tr>
+<tr>
+ <td valign=top style="height: 100%; background-color: #CCCCFF; cursor: hand; border-right: solid 1px;" >
+  <table width=100%>
+   <tr>
+    <td>
+      <span DefaultPhrase=BallotsLink></span>
+    <span id=divValidationStatus></span>
+     </td>
+    </tr>
+   <tr id=row2>
+    <td><div id=divBallotList AccessKeyPhrase="BallotsAccessKey" onclick="ClickBallotList(true)" ondblclick="ClickBallotList(true)" onkeydown="KeyDownInBallotList()" ></div>
+    </td>
+   </tr>
+  </table>
+  </td>
+ <td style="background-color: #CCFF99; width: 250px" valign=top align=left>
+  <div id=divTextNameLookup onclick="ClickTextLookup(false)" ondblclick="ClickTextLookup(true)"></div>
+  <div id=divTest></div>
+  </td>
+ <td valign=top>
+  <div id=divBallot DefaultPhrase=SelectBallot></div>
+  <button id=btnNewBallot onclick="NewBallot()" AccessKeyPhrase=BallotNewAccessKey DefaultPhrase=BallotNewLink></button>
+     &nbsp; 
+  <div class=BallotTips><br><ol>
+  <script>
+  for(var i=1; i<=100 && Phrase('BallotTip'+i).substring(0,2)!='??'; i++)
+   document.write('<li>' + Phrase('BallotTip' + i))
+  </script>
+  </ol></div>
+  </td>
+ </tr>
+ </table>
+<div id=divSpoiledTypes class=SpoiledList>
+  <span DefaultPhrase=SpoiledIntro></span>
+  <select class=selSpoiled></select>
+  <button type=button id=btnChooseSpoiled DefaultPhrase=ChooseSpoiled></button>
+</div>
+<div id=divDebug></div>
+</body>
+</html>

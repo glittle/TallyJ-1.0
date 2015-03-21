@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="../jquery-1.4.4.js"></script>
+  <script type="text/javascript" src="../general.js"></script>
+  <script type="text/javascript" src="../ballotChecks.js"></script>
+  <script type="text/javascript" src="../review.js"></script>
+  <link rel="stylesheet" type="text/css" href="../tally.css">
+  <script type="text/javascript">
+    sThisPage = 'Review'
+  </script>
+</head>
+<body style="margin: 0" class="ReviewPage">
+  <div style="background-color: #CCCCFF; padding: 2px 0 5px 0">
+    <span class=Title id=divReportTitle>
+    </span>
+    <button class=NoPrint type=button id=btnRevalidate onclick="RevalidateAll()" accesskeyphrase=BallotRefreshAccessKey
+      defaultphrase=BallotRefreshLink></button>
+    <span id=divValidationStatus>
+    </span>
+  </div>
+  <div id=divReport>
+  </div>
+  <div id=divDebug>
+  </div>
+</body>
+</html>

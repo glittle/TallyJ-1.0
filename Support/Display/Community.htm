@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<script TYPE="text/javascript" SRC="../jquery-1.4.4.js"></script>
+<script TYPE="text/javascript" SRC="../general.js"></script>
+<script TYPE="text/javascript" SRC="../namelist.js"></script>
+<script TYPE="text/javascript" SRC="../community.js"></script>
+<LINK REL="stylesheet" TYPE="text/css" HREF="../tally.css">
+</head>
+<script>
+sThisPage = 'Community' // used in code
+</script>
+<body>
+<table width="98%" border=0 height="98%" cellpadding=2 cellspacing=0>
+<tr height=5%>
+  <td width="30%" style="background-color: #CCCCFF" class=TitleTight>
+  <div id=divCommName></div>
+  </td>
+  <td  class=TitleTight><span DefaultPhrase=NameEdit></span>
+  </td>
+  <td align=right nowrap class=TitleTight>
+      <span DefaultPhrase=CommClearSources id=ClearReg></span>
+      &nbsp;
+      <button id=btnClearRegistration onclick="ClearRegistrationInfo()" DefaultPhrase=CommClearNow></button>
+
+  </td>
+
+</tr>
+<tr height=95%>
+  <td width="35%" valign=top style="background-color: #CCFF99" class=TitleTight>
+   <table width="100%" style="margin:0; padding:0;">
+    <tr>
+      <td></td>
+      <td align=right><button id=btnNewPerson onclick="NewPerson()" AccessKeyPhrase=AddNewPersonAccessKey DefaultPhrase=AddNewPerson></button></td>
+    </tr>
+    </table>
+    <table width="100%" ><tr>
+      <TD width="100%">
+      <table width="100%" cellspacing=0 cellpadding=0><tr><td>
+        <span DefaultPhrase="CommSearch"></span>: <INPUT AccessKeyPhrase="CommNamesAccessKey" id=FName_0 onkeydown="KeyDown('Search')" onkeyup="KeyUp('Search')" onfocus=NameFocus() onchange="NameChange()" size=20>
+        </td><td align=right>
+        <button onclick="ClearSearch()" DefaultPhrase="ClearSearch" style="margin:0; padding:0"></button>
+        </td></tr></table>
+      </TD>
+    </tr>
+    <tr >
+    <td colspan=2 style="background-color: #CCFF99;" valign=top align=right>
+      <div id=divTextNameLookup onclick="ClickTextLookup(false)" ondblclick="ClickTextLookup(true)"></div>
+    </td></tr>
+    </table>
+  </td>
+ <td valign=top colspan=2> 
+  <div id=divPerson DefaultPhrase="SelectAddName"></div>
+  <div class=BallotTips><br><ol DefaultPhrase="CommTips">
+  </ol></div>
+    <div id=divTest></div>
+  </td>
+</tr>
+ </table>
+
+<bgsound id=snd>
+<div id=divDebug></div>
+
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TallyJ Instructions</title><link rel="stylesheet" type="text/css" href="support/tally.css">
+</head>
+<body>
+  <table width="100%" cellspacing="0" cellpadding="5">
+    <tr class="TopRow">
+      <td width="34%">
+        <div id="divTopLeft">
+          <img height="82" src="images/tallyj.jpg" width="220"></div>
+      </td>
+      <td width="32%" valign="top" align="center">
+        <div id="TopCenter3">
+          Instructions
+        </div>
+      </td>
+      <td width="34%" valign="top" align="right">
+        <div id="divTopRight">
+          Version 1.70 - January 2011
+        </div>
+      </td>
+    </tr>
+  </table>
+  <!-- ------------------------------------- -->
+  <ol class="MainList">
+    <li>Definitions <dl>
+      <dt>Election <dd>Scheduled event where voters submit ballots
+        <dt>Ballot <dd>A list of names, submitted by a Voter. Usually a piece of paper. Each
+          ballot consists of a specific number of votes (e.g. 9 names for Assembly elections).
+          <dt>Vote <dd>Name of one individual. A vote is written on a ballot.
+            <dt>Community List <dd>For the purposes of elections (and TallyJ), a community is
+              the group of people who are eligible to <strong>vote</strong> and be <strong>voted
+                for</strong> in the election. This usually consists of the adult Bahá'ís in good-standing
+              living in a particular geographic area. If others (children, youth, ineligible adults,
+              etc.) are included in the community list, they will not be seen in TallyJ except
+              for the complete community reports.
+              <dt>Electee <dd>A person who has been voted for in an election
+                <dt>Elected<dd>An electee who has received enough votes to rank in the top 9 (for
+                  Assembly elections) positions
+                  <dt>Voter/Elector <dd>A person who is permitted to submit a ballot (e.g. adults in
+                    community or delegates)
+                    <dt>Tellers <dd>Individuals tasked to count votes cast and report the results to the
+                      community
+                      <dt>Spoiled Ballot <dd>A ballot not containing the required number of distinct votes.
+                        All votes on the ballot are ignored.
+                        <dt>Spoiled Vote <dd>A vote that is not readable or is for someone who is ineligible
+                          to receive a vote. The rest of the votes on the ballot are still counted.
+                          <dt>Ineligible <dd>A person who is not an adult member in good standing of the community
+                            <dt>Tally <dd>The act of counting the votes in an election.</dd>
+                              <dt>TallyJ <dd>A computer program designed to assist tellers in the tallying of ballots
+                                in a Bahá'í election.</dd>
+    </dl>
+    </li>
+    <li>Steps for Using TallyJ <ul>
+      <li>Before the Election <ul>
+        <li><a href="#Install">Install TallyJ</a></li>
+        <li><a href="#Practice">Practice using TallyJ</a></li>
+        <li><a href="#Translate">Translate TallyJ into another language</a></li>
+        <li><a href="#PrepC">Prepare a Community List File (optional but recommended)</a></li>
+        <li><a href="#PrepE">Prepare one or more Election Files</a></li>
+        <li><a href="#Alter">Technical Modifications </a></li>
+      </ul>
+      </li>
+      <li>At the Election <ul>
+        <li><a href="#Setup">Setup the Computers at the Election Site</a></li>
+        <li><a href="#Load">Load the Community and Election files into TallyJ</a></li>
+        <li><a href="#Collect">Collect the Ballots</a></li>
+        <li><a href="#Enter">Enter the Ballots into TallyJ</a></li>
+        <li><a href="#Merge">Merge the Election files (if needed)</a></li>
+        <li><a href="#Report">View and/or print the Election Results report</a></li>
+        <li><a href="#Tie">Resolve Ties</a></li>
+      </ul>
+      </li>
+      <li>After the Election <ul>
+        <li><a href="#Archive">Archive the Results</a></li>
+      </ul>
+      </li>
+    </ul>
+      <li><a name="Install">Install TallyJ</a>
+        <div class="Plain">
+          <div class="InfoSideBar">
+            Updated for version 1.70</div>
+          <p>TallyJ is a set of "web pages" that are copied to your computer and run from there.
+            They do not need or use a connection to the internet or a web server. The only requirements
+            are a Windows XP, Vista or 7 computer with Internet Explorer 8 and MS XML Core Services
+            6 (already installed on most computers).</p>
+          <p>To install TallyJ, download the most current ZIP file from the "Downloads" section
+            of the <a href="http://code.google.com/p/tallyj/" target="code">TallyJ Code</a>
+            site. The contents of the ZIP file must be extracted into a folder on your computer.
+            Later, if you need to install an updated version of TallyJ, the new files can be
+            extracted to the same folder and overwrite the existing files. (Your custom data
+            files will not be affected.)</p>
+          <p>When you run TallyJ, it will tell you if you need to install MS XML Core Services.
+            If you do, you will find a link to it in the "Links" section of the <a href="http://www.facebook.com/pages/TallyJ-Support-Page/131404030259859"
+              target="fb">TallyJ Support Page</a> on Facebook. </p>
+          <p>To run TallyJ, simply double-click on the "TallyJ.hta" file in the folder where
+            the TallyJ files were extracted to. If you are asked for confirmation that you want
+            to open it, please provide it. A shortcut to this file could be created and moved
+            to your Desktop or Quick Launch area for easy access later.</p>
+          <p>On election day, all computers that are networked together can use a <b>common
+            set</b> of TallyJ files. However, if TallyJ will be used on computers that are not
+            connected together, repeat these steps on each computer (preferably, before the
+            election). </p>
+          <p></p>
+        </div>
+      </li>
+      <li><a name="Practice">Practice using TallyJ</a>
+        <div class="Plain">
+          <p>After opening the TallyJ.hta files for the first time, click the <b>Files</b> button
+            at the top. In the list of files shown, double-click "SampleElection" and "SampleCommunity".
+            TallyJ will now use these two files on each page and each time you use TallyJ until
+            you change it here.</p>
+          <p>The <b>Election</b> page is where the details of the election are entered. </p>
+          <p>The <b>Community</b> page is where the names of people in the system can be viewed
+            and modified. </p>
+          <p>The <b>Ballots</b> page is for the entry of ballots and votes. See the section
+            below about entering the ballots into TallyJ for details.</p>
+          <p>The <b>Reports</b> page provides a variety of reports about the ballots entered.
+            Try viewing each report and understand what each shows.</p>
+          <p>The <b>Save</b> button appears whenever some information needs to be saved. The
+            Save button sometimes does not appear until the cursor is moved out of the entry
+            box, or you click anywhere on the page. <strong>Caution</strong>: pressing the F5
+            key at any time will reload the application and if there was a Save needed, the
+            unsaved data will be lost.</p>
+          <p>On each page, some words have one letter u<u>n</u>derlined (like that). Holding
+            the ALT key while typing that letter or number will click the button or move to
+            that spot on the page.</p>
+          <p>To close TallyJ, simply close the window. (As long as the Save button is not visible,
+            all ballots and votes are saved to the current Election file.) </p>
+          <p>It would be prudent to include a "computer-savvy" person among the tellers to ensure
+            that computer problems do not delay the tallying process!</p>
+        </div>
+      </li>
+      <li><a name="PrepC">Prepare a Community file</a>
+        <div class="Plain">
+          <p>When entering the names appearing on a ballot, data entry is made much faster if
+            an accurate Community List has been loaded ahead of time. This list should contain
+            the names of all the eligible members of the community.</p>
+          <p>The Community file is an XML file in ANSI format (not UTF or Unicode) that is structured
+            in a particular way. It could look something like:</p>
+          <blockquote class="XMLSample">&lt;Community Name="Calgary"&gt;<br>
+            &nbsp; &lt;Person LName="Chang" FName="Francisco"/&gt;<br>
+            &nbsp; &lt;Person LName="Danúe" FName="Änj"/&gt;<br>
+            &nbsp; &lt;Person LName="Smith" FName="John" AKAName="Johnny"/&gt;<br>
+            &nbsp; &lt;Person LName="Smith" FName= "John" AKAName= "JohnA." BahaiId= "W20323"/&gt;<br>
+            &nbsp; ...<br>
+            &lt;/Community&gt; </blockquote>
+          <p>The actual file has more attributes on the first line and some extra lines above
+            that. A template community file is supplied. You should copy that file, then edit
+            the new file and insert the &lt;Person&gt; lines for your community. If you have
+            a list of names in something like MS Excel, you can use Excel to format the names
+            as shown and then copy them into your new file. </p>
+          <p>Tools to assist in creating the list may be available on the TallyJ web site.</p>
+          <p>Each &lt;Person&gt; line must include the <b>LName</b> and <b>FName</b> attributes.
+            If there are two or more people with the same name, an <b>AKAName</b> can also be
+            supplied to distinguish between them and shows on the screen as "Other Info". If
+            desired, a <strong>BahaiId</strong> can be provided, but this is in no way required
+            by TallyJ. The <strong>Tie Break Resolution</strong> is not required and is generally
+            entered only when there is a tie-vote at the election.</p>
+          <p>If a Community file is not completely filled beforehand, it can be added to as
+            the ballots are entered. If the Community file is empty when starting the tally,
+            a setting on the Ballot page will let you choose to show "Add to List" for all ballots.</p>
+          <p>Usually, during an election, the list of people may be reviewed and adjusted by
+            the tellers. Use the <b>Community</b> page to add, correct and remove names from
+            the list. If this is done after some ballots have been entered, all ballots with
+            the changed person will need to be updated to match the new name. </p>
+          <p>The Community list can be <strong>printed</strong> from the Reports page in a number
+            of different formats. This can be used to produce paper lists for use by electors
+            and tellers at the election.</p>
+          <p>If more than one computer will be used to enter the ballots and they are not sharing
+            a common Community file, and a Community file is not prepared, extreme caution must
+            be taken to ensure that one individual's name is not entered in two different formats
+            or spelling. If the two names are not precisely identical, TallyJ will consider
+            them to be two separate people and report the results as such, splitting the votes
+            between the two variations of the name.</p>
+          <p>Load the Community file into TallyJ from the Data folder using the <b>Files</b>
+            page:</p>
+          <ol>
+            <li>Copy the file into the Data folder</li>
+            <li>Click the "Files" button in TallyJ. You should see "Files in the Data Folder"
+            </li>
+            <li>Your file should be in the list near the center of the screen. You may need to
+              click "Refresh List". </li>
+            <li>Click on the file in the list. A button called "Load Community File" will appear
+              if the file is valid. </li>
+            <li>Click the "Load Community File" button. This will load that file and use it as
+              the community file. </li>
+          </ol>
+        </div>
+      </li>
+      <li><a name="PrepE">Prepare the Election File</a>
+        <div class="Plain">
+          <p>An Election file is created on the <strong>Files</strong> page. Name the new file
+            according to the election being recorded, e.g. "LSA 2003.xml". After creating the
+            file, load it and go to the <strong>Election</strong> page to configure the contents
+            of the file.</p>
+          <p>Before the first ballot is entered, the Election file must be told what to expect.
+            On the <b>Election</b> page of TallyJ, the number of votes to appear on each ballot
+            is selected. For Assembly elections, "Number to Elect" should be set to 9. For Unit
+            or other elections, choose the required number. The other configuration information
+            can be added or adjusted later.</p>
+          <p>If more than one computer will be used to enter the ballots, a separate Election
+            file must be prepared for each computer. One file should be considered the "<strong>master</strong>"
+            file. After the ballots are entered, the "other" election files will be <strong>merged</strong>
+            into the master file for counting and reporting. The configuration details of the
+            master file should be carefully set. For the other files, only the "Code for this
+            Computer" detail needs to be set. Each file must have a unique code. This is used
+            to "tag" the ballots being entered with a unique Id. Typically, the master election
+            file will be created, loaded and the election information set, and saved; then that
+            file is duplicated to create all the other Election files; then each of the new
+            Election file is loaded and the "Code" is changed and saved.</p>
+          <p><i>For instance, if 5 laptops will be networked together and all accessing a folder
+            on computer M, the TallyJ files are installed on computer M with a Community file
+            (Community.xml) and a master Election file (ElectionMaster.xml). In the ElectionMaster.xml,
+            the "Code for this Computer" is set to, say, M. Four duplicates of the Election
+            file are created called ElectionA, ElectionB, ElectionC and ElectionD. Each Election
+            file is then loaded and the "Code for this Computer" is changed to match the file
+            name: A, B, C or D. Later, for reporting, these 4 files will be merged with the
+            master file.</i></p>
+          <p>Election files are stored in XML format in the Data folder. At any time, they can
+            be manually copied to a backup location, such as a memory stick or another computer,
+            and archived for safety.</p>
+        </div>
+      </li>
+      <li><a name="Alter">Technical Alterations</a>
+        <div class="Plain">
+          <p><b>Ballot Size</b> - the number of names that can appear on a ballot for Assembly
+            elections is usually 9. For bi-elections, the number is smaller. For Unit Elections,
+            the number to be elected may be more than 9 for larger communities. TallyJ currently
+            sets that limit at 30. If you need to increase that number, two changes need to
+            be made in the <i>election.xsd</i> file: the <i>NumberToElect</i> attribute and
+            <i>maxOccurs</i> in the Ballot/Vote element.</p>
+        </div>
+      </li>
+      <li><a name="Setup">Setup the Computers at the Election Site</a>
+        <div class="Plain">
+          <p>On the day of the election, the tellers' computers must be setup at the election
+            site.</p>
+          <p>A <em>suggested setup </em>includes:</p>
+          <ul>
+            <li>As many computers as needed, about 1 per every 50 ballots expected</li>
+            <li>Two tellers for each computer </li>
+            <li>One printer, attached to the "master" computer </li>
+            <li>A network router or hub and wiring to connect all computers together. A wireless
+              router can be used if the computers/laptops support it.</li>
+            <li>Enough power bars to supply all computers, monitors, hubs, printers, etc.</li>
+            <li>Extension cords long enough to supply power to the location where the tellers
+              will be counting votes</li>
+          </ul>
+          <p>Assistance in setting up the computers can be provided by non-tellers, such as
+            the people who may be lending their computers during the election and/or local computer
+            "experts".</p>
+          <p>The "master" computer is where the printer is attached and where the data files
+            are stored and collected. This should typically be the fastest or most capable of
+            the computers. Be sure to test printing to the printer before leaving home to verify
+            that the correct printer drivers are installed, etc. </p>
+          <p>If you have the equipment to network the computers, do so - it makes tallying the
+            votes faster and easier. Once connected, be sure that all the other computers can
+            connect to and view the TallyJ folder on the "master" computer. This may require
+            setting up new login IDs or sharing existing IDs. Be sure that at least one teller
+            is aware of all the IDs and passwords needed to establish the required network connections.</p>
+          <p>Arrange the computers so that two people can be in front of each computer - one
+            typing, and the other reading the names off the ballot papers, writing the Ballot
+            Id on each ballot paper, and verifying the names as they are being typed. If only
+            one teller is at the computer, the process still works, but is a little slower.</p>
+        </div>
+      </li>
+      <li><a name="Load">Load the Files into TallyJ</a>
+        <div class="Plain">
+          <p>On the <b>Files</b> page of TallyJ, the files currently in the Data folder are
+            listed. </p>
+          <p>If the computers are networked, they can and should share a common TallyJ folder.
+            All of them can run the same TallyJ.hta file. A separate copy of the election file
+            should be used for each computer. From each computer, open TallyJ.hta that is located
+            in the <strong>shared </strong>folder. Then load the common Community file and the
+            computer-specific Election file.</p>
+          <p>If the "Code for this Computer" configuration has not been set, do so before entering
+            any ballots. Each computer MUST have its own code and Election file.</p>
+        </div>
+      </li>
+      <li><a name="Collect">Collect the Ballots</a>
+        <div class="Plain">
+          <p>The procedure used to collect the ballots at the election is not prescribed by
+            TallyJ. Each community and country may have their own prescribed methods for doing
+            this.</p>
+          <p>As an <em>example</em> of how this might be done...</p>
+          <p>Completed ballot slips are placed into unmarked envelopes by voters. At a central
+            location, the ballots are placed in two types of ballot boxes (<em>Present </em>
+            and <em>Dropped Off</em>) and the tellers mark on a community list beside the name
+            of each voter whether they 1) voted in person (<em>Present</em>), or, 2) their sealed
+            ballot was delivered by mail or hand (<em>Dropped Off</em> ).</p>
+          <p>When the time for voting is finished, the ballot boxes are opened in private by
+            the tellers, the ballots are removed from the envelopes, and a careful count is
+            made of all the ballots. The totals are compared to the marked up community lists
+            to ensure that all ballots, whether <em>Present</em> or <em>Dropped Off</em>, are
+            accounted for. Collecting the ballots into stacks of 10 may help the counting process.
+            (Important: When opening the ballot envelopes, if a ballot is found to be torn or
+            separated by name, be sure to tape them together so that the ballot remains as a
+            single unit.)</p>
+          <p>Once the counts are confirmed, the tellers can begin entering the ballots into
+            TallyJ on the computer(s).</p>
+          <p><em>(The sample process described above is not an officially prescribed process,
+            just an example of what one community has done.)</em> </p>
+        </div>
+      </li>
+      <li><a name="Enter">Enter the Ballots into TallyJ</a>
+        <div class="Plain">
+          <p>The paper ballots being counted should remain <strong>intact</strong> throughout
+            the tallying process. When a system like TallyJ is <em>not </em>being used, tellers
+            have often cut ballots into individual votes to facilitate manual collating and
+            counting. This should NOT be done when using TallyJ. (In fact, any ballots received
+            on more than one piece of paper must be taped together to form a single ballot!)</p>
+          <p>To enter a ballot in TallyJ, <u>click the <strong>Add New</strong> button</u> on
+            the <b>Ballots</b> page. A new identification (Id) number is immediately created
+            and displayed near the top of the page. This Id consists of the unique "Code" for
+            this computer followed by a number, e.g. "A.12". <b><u>Write this Id on the paper
+              ballot</u></b> to make review and checking possible. All tellers should write
+            the ballot Ids in the same location on the paper, for instance, in the top-right
+            corner. Using a red pen is preferred.</p>
+          <p>For each name on the ballot, <u>begin</u> typing the name into the "Search" column.
+            As you do, the Community list in the <b>Names</b> area will display the all the
+            names matching what has been typed so far. Continue typing until the correct name
+            can be seen. Press the <strong>Up </strong>or <strong>Down </strong>keys to move
+            the highlighting in the List, and when the correct name is highlighted, press <strong>
+              Enter</strong>.</p>
+          <p>When <strong>Enter</strong> is pressed, the complete name from the list is automatically
+            copied into the Vote. Repeat for the next name on the ballot.</p>
+          <ul>
+            <li>If <em>too many</em> names have been put on the ballot, click "<strong>Too Many
+              Names?</strong>" at the top. If desired, the names on the paper can be entered into
+              TallyJ.</li>
+            <li>If <em>too few</em> names have been entered, leave the last vote line(s) blank.
+              After clicking "Save Ballot", then click the "<strong>Save Invalid Ballot</strong>"
+              to save the ballot. The ballot status will be set to "Too Few" and not be included
+              in the final count.</li>
+            <li>If a name on the paper is not readable, or is for a person known not to be in
+              the Community, click the "S" button on the line.</li>
+            <li>If the name is valid, but is not yet in the Community list, click the "+" button
+              then enter the full name carefully in the spaces provided. The name will be <strong>
+                added</strong> to the local Community list when the "Check &amp; Save Ballot"
+              button is clicked. <em>If using a common Community file between more than one computer,
+                everyone else should immediately click the "R" beside the Community name in the
+                top right corner of their screen. If not using a common Community file, carefully
+                ensure the same name is entered identically on the other computers, or copy the
+                updated Community file to the other computers.</em></li>
+            <li>(If a person voted for is an adult in the community, but inelegible for election,
+              you must update the person's record in the Community list to ensure it is marked
+              as ineligible or is deleted from the file.)</li>
+            <li>If a name is repeated twice on one ballot, you should enter the names exactly
+              as seen on the paper; when the ballot is checked, the status will be set to "Dup
+              Name".</li>
+          </ul>
+          <p><em>(Remember, throughout TallyJ, some letters in some words are underlined to
+            indicate keyboard shortcuts. For instance, if a buttons says "<u>A</u>dd New", then
+            pressing ALT-A will press the button or go to that spot.)</em></p>
+          <p>If you start the ballot entry without a Community List loaded, you can create it
+            as you enter ballots (as described above). In this case, you should check the box
+            beside "<strong>Default: Add to Community List</strong>". New ballots will start
+            with blank spaces available for entering names that need to be added to the List.
+          </p>
+          <p>In summary, try to enter what is seen on the paper as closely as possible into
+            TallyJ and write the ballot Id on the paper ballot.</p>
+        </div>
+      </li>
+      <li><a name="Merge">Merge the Election files (if needed)</a>
+        <div class="Plain">
+          <p>If more than one computer is being used to enter ballots, the "other" Election
+            files must be merged into the "master" Election file before obtaining final reports.</p>
+          <p>If a common folder on a "master" computer is not being used, start by copying the
+            "other" Election files to the computer and folder where the "master" Election file
+            is. This can be done via diskette or memory stick if no other way is available.
+            (The files are very small and hundreds could fit on one diskette.)</p>
+          <p>Once the files to be merged are in the same folder as the master file, go to the
+            <b>Files</b> page on the master computer. The file will be listed (click "Refresh
+            List" if needed); select it, then click "Merge with Current Election". The new ballots
+            in that file will be added to the Master file.</p>
+          <p>If the "other" Election file being merged has been merged previously, only new
+            ballots will be merged. The Ballot Id is used to determine which have been merged.
+            It is therefore safe to merge the same file files multiple times as the counting
+            proceeds.</p>
+        </div>
+      </li>
+      <li><a name="Report">View and/or print the Election Results report</a>
+        <div class="Plain">
+          <p>The <b>Reports</b> page can be used at any time to display the current election
+            results. </p>
+          <p>Before viewing the final reports: <ol>
+            <li>The "Manual Results" on the Election page need to be filled in. </li>
+            <li>The <b>Validate Ballots</b> button on the <b>Ballots</b> page the must be clicked
+              to validate the status of each vote and ballot. This must be done again if any vote
+              is later adjusted. </li>
+          </ol>
+          </p>
+          <p>Print the "Election Summary" report to provide official results of the election.
+            This report shows the number of votes received by the next person not elected. It
+            also attempts to indicate if there is a tie.</p>
+          <p>At an Annual Meeting or Unit Convention, if the community votes to have a full
+            report provided with all names, the suggested report to use is called "All by Votes".
+            Alternatively, the "All by Name" may be desired. </p>
+        </div>
+      </li>
+      <li><a name="Tie">Resolve Tie-breaks</a>
+        <div class="Plain">
+          <p>If a careful review of the results shows that there is a <strong>tie </strong>or
+            a <strong>small difference in the number of votes </strong>between last person elected
+            and the next electee, a careful double-check that all paper ballots where correctly
+            entered in TallyJ may be required. (Without TallyJ, a full recount would be needed.)
+            If a printer is available, print the "Ballots Cast" report and compare each ballot
+            on the printed report to the corresponding paper ballot (according to the Ballot
+            Id previously written on the paper ballot).</p>
+          <p>If there is a <strong>tie</strong>, a tie-break vote must be taken unless minority
+            rules apply. Once that is completed, the community list for the people involved
+            in the tie should be updated to set their "Tie Break Resolution" setting. This setting
+            (None, Low, High) is used when needed to break the tie. A person with High priority
+            wins over a person with Low priority. Similarly, Low wins over None. Once the priority
+            has been set for the tied electees, use <strong>Validate Ballots</strong> again,
+            then view the report again. TallyJ is set to correctly handle 2- or 3-way ties.
+          </p>
+          <p>Tie-break votes are typically not tallied using TallyJ, since there is only one
+            or a few names being voted for. "Traditional" paper-based tallying methods should
+            be used, where the votes are sorted into piles by name and counted.</p>
+          <p>For Unit Conventions where "the believers receiving the next highest number of
+            votes" are reported, all ties involving these people must be resolved by tie-break
+            unless minority rules apply.</p>
+          <p>Some of the reports available are:</p>
+          <ul>
+            <li>"Election Summary" - Full report with statistics and the names of the elected</li>
+            <li>"Top 9" - Top 9 electees with no counts shown</li>
+            <li>"Top 9+2 with Count" - Top 9 and next few with number of votes received shown</li>
+            <li>"All by Votes" - All electees and how many votes were cast for them</li>
+            <li>"Votes Cast" - All votes cast and their status. Invalidated votes are shown crossed
+              out.</li>
+            <li>"Ballots Cast" - All ballots cast and their status. Invalidated ballots and votes
+              are shown crossed out. A link is provided to directly edit any of the ballots.</li>
+            <li>"All by Name" - Alphabetical listing of all those receiving a vote, with the number
+              of votes shown.</li>
+            <li>"Summary - Ballots and Votes" - Statistical counts and summary for the election.</li></ul>
+          <p>You can print any report with the <b>Print</b> button or CTRL-P. The contents of
+            the report page can also be copied into another program, such as MS Word to be included
+            in existing reports.</p>
+          <p>PDF output files can be made by installing a PDF printer driver, and selecting
+            it as the output printer. There are a number of such drivers available. One that
+            seems to work well is available from <a href="http://sourceforge.net/projects/pdfcreator/">
+              PDF Creator</a>.</p>
+        </div>
+      </li>
+      <li><a name="Archive">Archive the Election documents</a>
+        <div class="Plain">
+          <p>After the election, many communities store the paper ballots for a year. A copy
+            of the TallyJ folder from the Chief Teller's computer could be copied to a diskette
+            and included in the archives.</p>
+        </div>
+      </li>
+      <li><a name="Translate">Translating TallyJ into other languages</a>
+        <div class="Plain">
+          <p>As of version 1.4, TallyJ can be translated into other languages. Multiple Language
+            Modules can exist side-by-side on the computer and the desired one used in TallyJ.
+            Most translation is done in a copy of the "Phrases_EN.txt" file. Help files can
+            also be copied and translated. All files for translation exist in the main folder
+            or the "Support/Display" folder.</p>
+          <p>TallyJ uses the concept of language and culture codes for identifying languages.
+            For example, EN, FR, FR-CA, DE-CH, ES, etc. The "culture code" can also be used
+            to make variant versions of TallyJ. </p>
+          <p>Suggested steps for translating:</p>
+          <ol>
+            <li>Copy and edit the Phrases_EN.txt file. More instructions can be found at the bottom
+              of that file. Each language has its own phrases file. The phrases files form the
+              core of TallyJ.</li>
+            <li>(Optional) Make a copy and translate each file (in the TallyJ folder and in the
+              TallyJ\Support\Display folder) that ends with _EN.htm. The new files should be named
+              according to the language code being translated, e.g. Overview_DE.htm.</li>
+          </ol>
+        </div>
+      </li>
+  </ol>
+  <p></p>
+</body>
+</html>

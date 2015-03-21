@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title></title>
+<script TYPE="text/javascript" SRC="../jquery-1.4.4.js"></script>
+<script TYPE="text/javascript" SRC="../general.js"></script>
+<script TYPE="text/javascript" SRC="../ballotChecks.js"></script>
+<script TYPE="text/javascript" SRC="../reports.js"></script>
+<LINK REL="stylesheet" TYPE="text/css" HREF="../tally.css">
+<script type="text/javascript">
+  sThisPage = 'Reports'
+</script>
+</head>
+<body style="margin:0" class="ReportsPage">
+<table width=98% style="height:100%" border=0 cellpadding=0 cellspacing=0><tr>
+<td width="25%" valign=top style="margin: 0 0 0 3; background-color: #CCCCFF" class="Title NoPrint">
+<div DefaultPhrase="ElectionReports"></div>
+<div id=divValidationStatus></div>
+</td>
+<td width="75%" class=Title style="padding: 2px 0 0 7px; font-style:italic"><span id=divReportTitle></span></td>
+</tr>
+
+<tr>
+ <td valign=top class=NoPrint style="background-color: #CCCCFF">
+  <table width=100%>
+  <tr>
+   <td valign=top height=1% style="border-right: solid 1px;">
+    <button type=button id=btnShowReport onkeydown="Move(selReportList)" onclick="ShowReport()" DefaultPhrase=ReportShow></button>&nbsp;
+    <button type=button id=btnPrint onkeydown="Move(selReportList)" onclick="ShowReport('p')" DefaultPhrase=ReportPrint></button> &nbsp;
+    <button type=button id=btnRevalidate onclick="RevalidateAll()" AccessKeyPhrase=BallotRefreshAccessKey DefaultPhrase=BallotRefreshLink></button>
+    <br>
+    <select id=selReportList AccessKeyPhrase="ElectionReportsAccessKey" style="width: 100%" ondblclick="ShowReport()" onkeypress="selReportListKeyPress()"></select>
+    </td>
+   </tr>
+
+  <tr>
+  <td class="Title" height=1% style="margin: 0 0 0 3; " DefaultPhrase=CommunityReports></td>
+  </tr>
+
+  <tr>
+   <td valign=top height=1% style="border-right: solid 1px;">
+    <button id=btnShowCommReport onkeydown="Move(selCommReportList)" onclick="ShowCommReport()" DefaultPhrase=ReportShow></button>&nbsp;
+    <button id=btnCommPrint onkeydown="Move(selCommReportList)" onclick="ShowCommReport('p')" DefaultPhrase=ReportPrint></button><br>
+    <select id=selCommReportList AccessKeyPhrase="CommunityReportsAccessKey" style="width: 100%" ondblclick="ShowCommReport()" onkeypress="selCommReportListKeyPress()"></select>
+    </td>
+   </tr>
+<tr><td>
+<div DefaultPhrase=ReportTips class=ReportTips></div>
+</td></tr>
+  </table>
+ </td>
+ <td valign=top style="padding: 4px">
+  <iframe id=iReport name=iReport></iframe>
+  </td>
+ </tr>
+ 
+ 
+ </table>
+<div id=divDebug></div>
+
+</body>
+</html>

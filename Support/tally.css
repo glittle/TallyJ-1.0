@@ -1,0 +1,839 @@
+html
+{
+  height: 100%;
+  margin: 0;
+}
+body
+{
+  font-size: 13pt;
+  font-family: Tw Cen MT, Verdana, Tahoma, Arial, Helvetica;
+  color: rgb(0,0,0);
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+iframe
+{
+  border-top: 1px solid #000;
+}
+body.hta
+{
+  margin: 0;
+  padding: 0;
+}
+
+table
+{
+  table-border-color-light: rgb(255,204,102);
+  table-border-color-dark: rgb(204,153,102);
+}
+
+#TopCenter2, #TopCenter3
+{
+  font-weight: bold;
+  color: rgb(87,72,255);
+}
+
+#TopCenter3
+{
+  margin-top: 15px;
+  font-size: 20pt;
+}
+
+button.menu
+{
+  margin: 0 1px 1px 1px;
+}
+
+DT
+{
+  margin-left: 10px;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+DD
+{
+  margin-left: 30px;
+}
+
+OL.MainList LI
+{
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+OL.MainList LI LI, DL
+{
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.Plain
+{
+  font-weight: normal;
+  margin-top: 0;
+}
+.SaveButton
+{
+}
+#btnCloseBallot
+{
+  margin-right: 3px;
+  color: #f00;
+}
+.BallotStatus
+{
+  font-weight: bold;
+}
+.VoteStatus
+{
+  color: #666;
+  font-size: 13px;
+  padding: 0 3px 0 3px;
+}
+#CommunityNameInput
+{
+  width: 80%;
+}
+.MaxNames
+{
+  margin: 3px 15px 0 0;
+  color: #999;
+}
+.ReportWarning
+{
+  font-weight: bold;
+  color: red;
+  font-style: italic;
+}
+.VAlignBottom
+{
+  vertical-align: baseline;
+}
+.ReportComment
+{
+  font-size: 11pt;
+  font-style: italic;
+}
+.ReportComment2
+{
+  font-size: 11pt;
+  font-style: italic;
+}
+Table.Spaced TR TD
+{
+  padding: 9px 0 0 0;
+  white-space: nowrap;
+}
+Table.Spaced TR TD.ReportComment2
+{
+  padding: 0px 0 0 30px;
+}
+#btnNewBallot
+{
+  margin: 3px 0 0 3px;
+}
+.BallotsPage #btnRevalidate
+{
+  font-size: 9pt;
+  width: 8em;
+}
+.comment, .ReportSmall
+{
+  font-size: 10pt;
+}
+.TiedTitle
+{
+  color: Black;
+  font-weight: normal;
+}
+input.ManualCount, input.TieBreakCount
+{
+  width: 50px;
+  text-align: right;
+}
+
+.Bold
+{
+  font-weight: bold;
+}
+tr.HideAfter
+{
+  display: none;
+}
+tr.After
+{
+  font-size: 10pt;
+  color: #999;
+}
+tr.XXXX
+{
+  font-size: 13pt;
+  color: red;
+  font-weight: bold;
+}
+.Tied
+{
+  color: red;
+}
+TR.Tied
+{
+  font-size: 13pt;
+}
+.TiedOkay
+{
+  color: blue;
+}
+TR.TiedOkay
+{
+  font-size: 13pt;
+}
+.Close
+{
+  color: orange;
+}
+.Legend SPAN
+{
+  padding: 1px 5px 1px 5px;
+  margin: 0 5px 2px 5px;
+  display: inline-block;
+}
+.Legend .Close
+{
+  background-color: orange;
+  color: Black;
+}
+.Legend .TiedOkay
+{
+  background-color: blue;
+  color: white;
+}
+.Legend .Tied
+{
+  background-color: red;
+  color: black;
+}
+.Chart
+{
+  border-top: solid 25px green;
+  height: 1px;
+}
+.Chart.Close
+{
+  border-top-color: orange;
+}
+.Chart.Tie
+{
+  border-top-color: red;
+}
+.Chart.TieOkay
+{
+  border-top-color: blue;
+}
+.Chart.After
+{
+  border-top-color: #999;
+}
+.Inputs
+{
+  display: none;
+}
+.Inputs span
+{
+  padding-right: 5px;
+  white-space: nowrap;
+}
+.InputComment
+{
+  display: inline-block;
+  font-size: x-small;
+  width: 300px;
+  padding: 0 0 0 5px;
+  vertical-align: top;
+}
+TR.ReportLined TD
+{
+  border-top: solid 1px light-gray;
+  vertical-align: top;
+}
+
+BlockQuote.XMLSample
+{
+  margin: 0 3em 1em 3em;
+  font-family: "courier new";
+  font-size: 10pt;
+  color: rgb(87,72,255);
+}
+
+Table.ReportWide
+{
+  width: 100%;
+}
+Table.Report TD
+{
+  vertical-align: top;
+  padding-right: 3px;
+}
+
+.ReportTitle
+{
+  font-weight: bold;
+  padding: 0 20px 0 0;
+}
+
+TR.TopRow
+{
+  background-color: #ffffff;
+  height: 75px;
+}
+
+TR.TopRow TD
+{
+}
+
+TR.ReportTitle TD
+{
+  border-bottom: double #cccccc 1px;
+}
+
+.ReportTitle2
+{
+  font-weight: bold;
+  font-size: 14pt;
+  padding: 15px 5px 0 0;
+  border-bottom: solid black 2px;
+}
+
+.ReportTitle3
+{
+  font-weight: bold;
+  font-size: 14pt;
+  padding: 20px 0 0 0;
+}
+.ReportTitleComment
+{
+  font-size: 10pt;
+  font-weight: normal;
+}
+DIV.BallotTips
+{
+  font-size: 10pt;
+}
+#SaveWarning
+{
+  color: Red;
+  display: inline-block;
+}
+#divDebug
+{
+  display: none; /*  */
+  position: fixed;
+  left: 200px;
+  top: 10px;
+  background-color: #bbb;
+  padding: 20px;
+  font-size: 14px;
+}
+
+Table.thin
+{
+  border: 0;
+  width: 101%;
+}
+
+Table.EditElection
+{
+  width: 100%;
+}
+
+Table.Page
+{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+TD
+{
+  margin: 0;
+  border-spacing: 0;
+  border-width: 0;
+  vertical-align: top;
+}
+.BallotVotesL, .BallotVotesC, .BallotVotesR, .BallotVotesAction
+{
+  background-color: #CCFF99;
+}
+.BallotVotesAction
+{
+  white-space: nowrap;
+}
+.BallotVotesL
+{
+}
+
+TD.PageBottom
+{
+  padding: 0;
+}
+
+TD.Name
+{
+  width: 10%;
+}
+TD.Spacer
+{
+  height: .3em;
+}
+TD.Title
+{
+  font-size: 14pt;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  padding-top: .2em;
+}
+
+TD.TitleTight
+{
+  font-size: 14pt;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
+TD.TitleTight TD
+{
+  font-size: 14pt;
+}
+#ClearReg
+{
+  font-size: 12pt;
+}
+
+div.TopRight1
+{
+  font-weight: bold;
+}
+
+div.TopRight2
+{
+  font-style: italic;
+}
+
+.TopRight3
+{
+  margin: 0 3px 2px 0;
+  font-size: 10pt;
+}
+
+#divTopLeft
+{
+  color: rgb(87,72,255);
+  padding: 0;
+  margin: 0;
+}
+
+#divTextNameLookup
+{
+  font-size: 11pt;
+  text-align: left;
+}
+
+#divBallotList
+{
+  font-size: 12pt;
+  text-align: left;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.Hidden
+{
+  display: none;
+}
+.Height100
+{
+  height: 100%;
+}
+
+.SmallSelect
+{
+  font-size: 9pt;
+}
+Input.VoteNames
+{
+  width: 100%;
+}
+input.wide
+{
+  width: 250px;
+}
+.Warning
+{
+  color: red;
+}
+.warning1
+{
+  color: red;
+  font-size: 10pt;
+}
+.Green
+{
+  color: Green;
+}
+h1
+{
+  font-family: Times New Roman, Times;
+}
+h2
+{
+  font-family: Times New Roman, Times;
+  margin: 0;
+}
+h3
+{
+  font-family: Times New Roman, Times;
+  margin: 0;
+}
+h4
+{
+  font-family: Times New Roman, Times;
+}
+h5
+{
+  font-family: Times New Roman, Times;
+}
+h6
+{
+  font-family: Times New Roman, Times;
+}
+
+UL
+{
+  list-style-image: url(arcbul1d.gif);
+  list-style-type: circle;
+}
+UL UL
+{
+  list-style-image: url(arcbul2d.gif);
+  list-style-type: circle;
+}
+UL UL UL
+{
+  list-style-image: url(arcbul3d.gif);
+  list-style-type: circle;
+}
+
+a:link
+{
+  color: rgb(51,153,255);
+}
+a:visited
+{
+  color: rgb(51,102,204);
+}
+a:active
+{
+  color: rgb(255,153,0);
+}
+
+.clickable
+{
+  cursor: hand;
+}
+#divCurrentBallotId
+{
+  font-weight: bold;
+  font-size: 15pt;
+  color: black;
+  padding: 0 3px 0 3px;
+}
+.ListWarn
+{
+  color: red;
+}
+.ListVoted
+{
+  color: blue;
+}
+.InfoSideBar
+{
+  float: right;
+  width: 50px;
+  border: 1px solid grey;
+  margin: 4px 0 4px 6px;
+  padding: 3px;
+  background-color: #eeeeee;
+  font-size: 10pt;
+  text-align: right;
+}
+
+/*  Registration  */
+#tip1
+{
+  float: right;
+  font-size: 10pt;
+}
+.NewInitial
+{
+  margin-top: 20px;
+  display: block;
+  border-top: 1px solid #ccc;
+  margin-bottom: 2px;
+  position: relative;
+  z-index: -1;
+}
+.Initial
+{
+  position: absolute;
+  display: block;
+  font-size: 150px;
+  color: #faa;
+  right: 3px;
+  top: -30px;
+  border: none;
+}
+#divRegTop
+{
+  background-color: #CCCCFF;
+  font-size: 14pt;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
+#divRegListing
+{
+  font-size: 30px;
+  margin: 0 0px 0 20px;
+  position: relative;
+  height: 95%;
+  overflow: auto;
+}
+#divListing button
+{
+  margin: 0 4px 0 0;
+  padding: 0 2px 0 2px;
+}
+
+.FDBahaiId
+{
+  color: #bbb;
+  padding-left: 10px;
+  font-size: 60%;
+}
+.Index
+{
+  font-size: 40%;
+  padding: 0 5px 5px 0;
+  width: 35px;
+  display: inline-block;
+  text-align: left;
+  color: #555;
+}
+.FDName
+{
+  display: inline-block;
+  white-space: normal;
+  vertical-align: bottom;
+  max-width: 50%;
+}
+.FDLName
+{
+  font-weight: bold;
+  padding-left: 5px;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+}
+.DupLName
+{
+}
+.DupLName span
+{
+  color: #ccc;
+}
+.FDButton
+{
+  border: 1px solid black;
+  background-color: #eee;
+  font-size: 16px;
+  padding: 3px 6px 3px 6px;
+  display: inline-block;
+  margin: 0 6px 0 6px;
+  cursor: pointer;
+}
+.FDButton:hover
+{
+  background-color: #f0f;
+}
+.FDButton.IsSet
+{
+  background-color: green;
+  color: #fff;
+}
+.EnvNumHolder
+{
+  display: inline-block;
+  width: 35px;
+  text-align: right;
+  font-size: 10px;
+}
+.EnvNum span
+{
+  font-size: 16px;
+  padding-left: 2px;
+}
+.FDRow:hover .FDName
+{
+  /* background-color: #d9e9f9; -- too slow in IE8 */
+  background-color: #ffccff;
+}
+.FDName.IsSet span.FDRest .FDBahaiId, .FDName.IsSet span.FDRest
+{
+  color: #A8F7A8;
+}
+.Info
+{
+}
+.Overline
+{
+  border-top: 1px solid #000;
+}
+.Overline2
+{
+  text-decoration: overline;
+}
+.SmallBtn
+{
+  font-size: 8pt;
+}
+
+.BallotsValidationStatus0, .BallotsValidationStatus1
+{
+  color: Red;
+  font-size: 12pt;
+  font-weight: bold;
+  margin: 0 0 0 20px;
+}
+
+body.ReviewPage .BallotsValidationStatus1, .BallotsValidationStatus2
+{
+  color: Green;
+  font-size: 12pt;
+  margin: 0 0 0 20px;
+}
+.BallotsValidationStatus0Short, .BallotsValidationStatus1Short
+{
+  color: gray;
+  font-size: 10pt;
+  padding-left: 10px;
+}
+
+.BallotsValidationStatus2Short
+{
+  color: Green;
+  font-size: 10pt;
+  padding-left: 10px;
+}
+
+
+.ReviewPage .Title
+{
+  font-size: 14pt;
+  padding: 5px 0 3px 5px;
+}
+.ReviewPage #btnRevalidate
+{
+  margin: 5px 10px 2px 30px;
+  font-size: 10px;
+}
+
+.TieBreakList TD
+{
+  padding: 0 15px;
+}
+#InvalidTieCounts
+{
+  display: none;
+  padding: 10px 0 10px 15px;
+}
+#btnSaveTieBreakCounts
+{
+  margin-left: 15px;
+}
+.Error
+{
+  color: Red;
+}
+
+.UseAutotrue, .UseManualtrue
+{
+  /* background-color: #DCFCDC; */
+}
+.UseAutofalse .Green, .UseAutofalse, .UseManualfalse .Green, .UseManualfalse
+{
+  /* background-color: #FFDCDC; */
+  color: #aaa;
+}
+
+.StatusGroup
+{
+  display: inline-block;
+  margin-left: 1px;
+}
+#divSpoiledTypes
+{
+  display: none;
+}
+.SpoiledList span
+{
+  display: block;
+}
+.SpoiledList select
+{
+  display: inline-block;
+  margin: 5px 4px 3px 3px;
+}
+
+.CurrentReason
+{
+  padding: 0 20px 0 5px;
+  font-style: italic;
+  font-size: .9em;
+}
+.ReportTips
+{
+  color: #999;
+  margin-top: 15px;
+  font-size: 85%;
+  font-style: italic;
+}
+.ReportTips ul
+{
+  margin-left: 20px;
+}
+#iReport
+{
+  width: 100%;
+  height: 100%;
+  border-top: none;
+}
+@media print
+{
+  .NoPrint
+  {
+    display: none;
+  }
+
+  .ReportSmall
+  {
+    font-size: 9pt;
+  }
+
+}
+
+/* for design help
+.Report TD
+{
+  border: solid 1px orange;
+}
+*/

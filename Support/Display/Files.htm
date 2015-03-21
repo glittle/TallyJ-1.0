@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<script TYPE="text/javascript" LANGUAGE="javascript" SRC="../general.js"></script>
+<script TYPE="text/javascript" LANGUAGE="javascript" SRC="../files.js"></script>
+<LINK REL="stylesheet" TYPE="text/css" HREF="../tally.css">
+</head>
+<script>
+sThisPage = 'Files'
+</script>
+<body>
+<P DefaultPhrase=FilesIntro></P>
+<table width="100%" style="border:outset 3px; background-color: #CCFF99" border=1>
+<tr>
+<td valign=top width=10% nowrap><h3><i DefaultPhrase="Current Election"></i></h3></td>
+ <td valign=top><span id=divShowElection></span></td>
+</tr>
+<tr>
+<td valign=top nowrap><h3><i DefaultPhrase="Current Community"></i></h3></td>
+ <td valign=top><span id=divShowCommunity></span></td>
+</tr>
+</table>
+<br>
+<table>
+<tr><td colspan=3><h2 DefaultPhrase="FileListLink"></h2></td>
+
+</tr>
+<tr>
+ <td valign=top width="35%"><div DefaultPhrase=FileClickOn></div><br>
+ <h3 DefaultPhrase=CreateFiles></h3>
+ <div DefaultPhrase=CreateFilesDesc></div>
+ <span DefaultPhrase=CreateFileName></span>: <input type=text id=CreateFileName>
+ <div align=left style="padding:0px"><button onclick="CreateElection()" DefaultPhrase="CreateElection"></button>
+ <br><button onclick="CreateCommunity()" DefaultPhrase="CreateComm"></button>
+ <br><button onclick="DupElection()" DefaultPhrase="DupElection"></button>
+ </div>
+
+  </td>
+ <td valign=top width="10%">
+  <select AccessKeyPhrase="FileListAccessKey" id=selFileList onchange="ShowFileDetail()" ondblclick="LoadFile()" size=15></select>
+  </td>
+ <td valign=top align=left width="55%">
+ <table width="100%" border=1>
+ <tr><td width="25%" nowrap DefaultPhrase="File Type"></td><td width="75%"><span id=divFile_FileType></span></td></tr>
+ <tr><td DefaultPhrase=FileName></td><td width="95%"><b><span id=divFile_Name></span></b></td></tr>
+ <tr><td nowrap><span id=divFile_Info1Label></td><td><span id=divFile_Info1></span></td></tr>
+ <tr><td nowrap><span id=divFile_Info2Label></span></td><td><span id=divFile_Info2></span></td></tr>
+ <!--tr><td>File</td><td width="95%"><span id=divFile_File></span></td></tr-->
+ <tr><td colspan=2>
+   <button id=btnLoad onclick="LoadFile()" fileName='' fileType='' style="DISPLAY: none" AccessKeyPhrase="FileLoadAccessKey" DefaultPhrase=FileLoad></button>
+   &nbsp; <button id=btnMerge onclick="MergeFile()" fileName='' fileType='' style="DISPLAY: none" AccessKeyPhrase="FileMergeAccessKey" DefaultPhrase=Merge></button>
+   &nbsp; <span id=divMsg></span></td></tr>
+ </table>
+ <P><span DefaultPhrase=FileDetail1></span><br> <a id=linkDataPath target=Explorer href=""><span id=divDataPath></span></a>
+ <br><button onclick="GetFileList()" DefaultPhrase="Refresh List"></button></P>
+ <P DefaultPhrase=FileDetail3></p>
+ </td>
+ </tr>
+</table>
+
+
+
+<div id=divX></div>
+<div id=divDebug></div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+body td
+{
+  font-size: 12pt;
+  font-family: Times New Roman;
+}
+
+.ReportWarning
+{
+  font-weight: bold;
+  color: red;
+  font-style: italic;
+}
+.ReportComment
+{
+  font-size: 11pt;
+  font-style: italic;
+}
+.ReportComment2
+{
+  font-size: 11pt;
+  font-style: italic;
+}
+Table.ReportWide
+{
+  width: 100%;
+}
+Table.Report TD
+{
+  vertical-align: top;
+  padding-right: 3px;
+}
+
+.ReportTitle
+{
+  font-weight: bold;
+  padding: 0 20px 0 0;
+}
+.ReportSmall
+{
+  font-size: 10pt;
+}
+Table.Spaced TR TD
+{
+  padding: 9px 0 0 0;
+  white-space: nowrap;
+}
+Table.Spaced TR TD.ReportComment2
+{
+  padding: 0px 0 0 30px;
+}
+TR.ReportTitle TD
+{
+  border-bottom: double #cccccc 1px;
+}
+
+.ReportTitle2
+{
+  font-weight: bold;
+  font-size: 14pt;
+  padding: 15px 5px 0 0;
+  border-bottom: solid black 2px;
+}
+
+.ReportTitle3
+{
+  font-weight: bold;
+  font-size: 14pt;
+  padding: 20px 0 0 0;
+}
+.ReportTitleComment
+{
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+@media print
+{
+  .NoPrint
+  {
+    display: none;
+  }
+}
+
+
+
+
