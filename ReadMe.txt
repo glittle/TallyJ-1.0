@@ -1,6 +1,10 @@
-TallyJ
+TallyJ 1.85
 ------
-For support and updates, visit the TallyJ Support Page on Facebook: http://www.facebook.com/pages/TallyJ-Support-Page/131404030259859
+Original version of TallyJ. For a the current version, please see https://tallyJ.apphb.com/
+
+Old
+------
+For support and updates, visit the TallyJ Support Page on Facebook: http://www.facebook.com/pages/TallyJ-Support-Page/
               
 
 Requirements for TallyJ
@@ -17,4 +21,3 @@ Running TallyJ
 --------------
 - Open the "TallyJ.HTA" file
 - Further instructions can be found in the Instructions_EN.htm file.
-
