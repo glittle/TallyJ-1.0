@@ -4,7 +4,7 @@ Original version of TallyJ. For the current version, please see https://TallyJ.c
 
 Old
 ------
-For support and updates, visit the TallyJ Support Page on Facebook: http://www.facebook.com/pages/TallyJ-Support-Page/
+For support and updates, visit the TallyJ Support Page on Facebook: https://business.facebook.com/TallyJ.Support/
               
 
 Requirements for TallyJ
