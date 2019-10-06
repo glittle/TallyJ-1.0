@@ -1,6 +1,6 @@
 TallyJ 1.85
 ------
-Original version of TallyJ. For a the current version, please see https://tallyJ.apphb.com/
+Original version of TallyJ. For the current version, please see https://TallyJ.com/
 
 Old
 ------
